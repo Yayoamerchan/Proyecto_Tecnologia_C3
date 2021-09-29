@@ -1,0 +1,266 @@
+body {
+    padding: 0;
+    margin: 0;
+    padding: 0 20px;
+    background-image: url("../images/Imagen1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 0.3fr 2fr 2fr; 
+    grid-template-rows: 0.3fr 1.6fr 1.6fr 0.6fr; 
+    gap: 5px 5px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "encabezado encabezado encabezado"
+      "landing_navbar servicios servicios"
+      "landing_navbar servicios servicios"
+      "landing_navbar foot foot";
+  }
+  
+.encabezado { 
+    grid-area: encabezado;
+    justify-content: center;
+    align-items: center;
+    background-color: #0B1047;
+    text-align: center;
+    height:  70px;
+    width: auto;
+}
+
+.servicios { 
+    grid-area: servicios;
+    border: 1px solid black;
+}
+
+.landing_navbar { 
+    grid-area: landing_navbar; 
+    border: 1px solid black;
+    display: grid; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: 1.5fr 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+        "nav_01"
+        "nav_02"; 
+}
+
+.foot {
+    border: 1px solid white;
+    grid-area: foot; 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr; 
+    gap: 5px 0px; 
+    grid-template-areas: 
+      "foot01 foot02"; 
+}
+  
+.foot01 {
+    grid-area: foot01;
+    border: 1px solid white;
+    background-color: #0B1047;
+    color: white;
+}
+
+.foot02 {
+    grid-area: foot02;
+    border: 1px solid white;
+    background-color: #0B1047;
+    color: white;
+}
+
+nav {
+    padding: 0.3em;
+}
+    
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+    
+nav ul li {
+    list-style: none;
+    padding: 0 10px;
+}
+
+.title {
+    text-align: center;
+    font-family: sans-serif ;
+    font-style: oblique;
+    font-size: xx-large;
+    color: #fff;
+}
+
+button{
+    background-color: #0B1047;
+    color: white;
+    border-bottom-color: black;
+    border: 1px solid;
+    font-family: Broadway;
+    font-size: medium;
+    width: 150px;
+    height: 53px;
+    text-align-last:center ;
+    position: relative;
+    align-content: flex-start;
+}
+  
+nav a:hover {
+color: orangered;
+}
+    
+/* --------- */
+
+#navbar_logo {
+    height: 65px;
+}
+
+aside{
+    border: 5px solid black;
+}
+
+#btn_irRegistro {
+    align-items: flex-end;
+}
+
+/* --- Contactos */
+
+.formulario {
+    border: 1px solid lightgrey;
+}
+  
+.data, textarea {
+    width: 30%;
+    padding: 5px;
+    border-radius: 2px;
+    border: 1px solid lightgrey;
+    margin-bottom: 6px;
+}
+  
+.foot01 .foot02 {
+    text-align: center;
+    margin: auto 0;
+    display: inline-block;
+    color: black;
+}
+
+p, h4 {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+h2, h1 {
+    text-align: center;
+}
+
+.label {
+    font-size: medium;
+    font-family: fantasy;
+}
+
+.data:valid {
+    background-color: rgb(215, 243, 226);
+  }
+
+data:invalid {
+    background-color: rgba(245, 245, 245, 0.863);
+}
+
+/*Seccion redes sociales por Gilberto Leguizamon*/
+#menu_redes{
+        position: fixed;
+        display: flex;
+        background-color: #ccccff;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+        bottom: 0px;
+        right: 0px;
+        border-left: 2px solid #0000cc;
+        border-top: 2px solid #0000cc;
+        border-radius: 15px 0px 0px 0px;
+        width: 230px;
+        height: 40px;
+        padding: 2px 0px 0px 0px;
+    }
+
+.social_network:hover{
+  transform: scale(1.2);
+}
+/*Fin seccion redes sociales*/
+
+#menus{
+    margin: 200;
+    width: 280px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.nav li ul {
+    display:none;
+    position:relative;
+    right: -240px;
+    top:0px;
+}
+
+.nav li:hover > ul {
+    display:block; 
+}
+
+ul, ol {
+    list-style:none;
+}
+
+.nav li a {
+    background-color: #0B1047;
+    color:#fff;
+    text-decoration:none;
+    padding: 10px 10px;
+    display:block;
+}
+.nav li a:hover{
+    background-color: #434343                                    
+}
+
+.nav > li {
+   display:block;
+  
+}
+.nav_01 {
+    grid-area: nav_01;
+    display:block;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+}
+
+.nav_02 {
+    grid-area: nav_02;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+ul, ol {
+    list-style:none;
+}
+
+.nav {
+    grid-area: nav_01;
+    display:block;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+}
+
+/*Requisitos usuario y password*/
+.requisitos{
+    font-style: italic;
+    font-size: 14px;
+    color: #ffff00;
+}
+/*Fin requisitos usuario y password*/

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="public_html/validaciones.js" type="text/javascript"></script>
+
     <link rel="stylesheet" href="css/estilos.css" />
     <link rel="icon" href="images/imagenlogo_1.png" />
 
@@ -24,7 +24,7 @@
             <div class="formulario">
 <!-- --2 campos, nombre de usuario y contraseña. Etiqueta <form> cuyo atributo id debe ser "form_registro_usuario"
 Con la etiqueta <input> cuyos id deben ser "in_usuario" y "in_contrasena"-->
-                <form action="" id="form_registro_usuario">
+<!--                 <form action="" name="formRegistro" id="form_registro_usuario">
                     <label for="nombres">Nombres</label>
                     <br />
                     <input type="text" id="nombres" class="data" placeholder="Nombres" required  />
@@ -32,10 +32,10 @@ Con la etiqueta <input> cuyos id deben ser "in_usuario" y "in_contrasena"-->
                     <label for="apellidos">Apellidos</label>
                     <br />
                     <input type="text" id="apellidos" class="data" placeholder="Apellidos" required />
-                    <br />
+                    <br /> -->
                     <label for="in_usuario">Nombre de Usuario</label>
                     <br />
-                    <input type="text" id="in_usuario" class="data" placeholder="Nombre de usuario" required />
+                    <input type="text" id="in_usuario" class="data" placeholder="Nombre de usuario" minlength="4" maxlength="9" name="nombre" required />
                     <label class="requisitos usuario"> 
                         <ul>
                             <li>Debe ingresar más de 3 caracteres</li>
@@ -44,18 +44,19 @@ Con la etiqueta <input> cuyos id deben ser "in_usuario" y "in_contrasena"-->
                         </ul>
                     </label>
                     <br/>
-                    <label for="in_contrasena">Contraseña</label>
+<!--                     <label for="in_contrasena">Contraseña</label>
                     <br />
-                    <input type="password" id="in_contrasena" class="data" placeholder="Contraseña" required />
+                    <input type="password" id="in_contrasena" class="data" placeholder="Contraseña" minlength="3" maxlength="9" required />
                     <label class="requisitos password"> 
                         <ul>
                             <li>Debe tener 6 o más caracteres</li>
                             <li>Sólo puede ingresar caracteres alfanuméricos(letras de la A a la Z y números del 0 al 9)</li>
                         </ul>
+                        <br />
                     </label>
                     <label for="in_contrasena">Confirmar contraseña</label>
                     <br />
-                    <input type="password" id="conf_contrasena" class="data" placeholder="Contraseña" required />
+                    <input type="password" id="conf_contrasena" class="data" placeholder="Contraseña" minlength="3" maxlength="9" required />
                     <br/>
                     <br/>
                     <label for="phone">Teléfono</label>
@@ -70,14 +71,13 @@ Con la etiqueta <input> cuyos id deben ser "in_usuario" y "in_contrasena"-->
                     <br />
                     <input type="email" id="email" placeholder="Correo electrónico" class="data" required />
                     <br />
-                    
-                    
-                    <!-- <textarea id="message" placeholder="Mesagge" required ></textarea> -->
-                    <a href="#">
+ -->                     
 <!-- --etiqueta <button> cuyo atributo id debe ser btn_enviar_registro-->
-                    <button type="button" class="main_btn" id="btn_enviar_registro" onclick="validar_nombreUsuario(document.getElementById('in_usuario').value);validar_contrasena(document.getElementById('in_contrasena').value);">Enviar</button>
-                    
-                    </a>
+                    <button type="button" class="main_btn" onclick="validar_nombreUsuario();">Enviar</button> <!--validar_nombreUsuario() -> Nombre de la funcion que esta en el js -->
+                    <button type="button" class="main_btn" onclick="validar();">Validar</button>
+<!--                     <button type="button" class="main_btn" onclick="cambiar();">Cambiar</button>-->
+<!--                <button type="button" class="main_btn" id="btn_enviar_registro" onclick="validar_nombreUsuario(document.getElementById('in_usuario').value);validar_contrasena(document.getElementById('in_contrasena').value);">Enviar</button> -->                   
+
                 </form>
             </div>
             
@@ -92,6 +92,8 @@ Con la etiqueta <input> cuyos id deben ser "in_usuario" y "in_contrasena"-->
             <a href="index.html">
                 <button id="btn_irRegistro" title="A Registro">
                     Home
+                    <br />
+                    <img src="images/home.png" width="30" height="30" >
                 </button>
             </a>
         </aside>
@@ -100,7 +102,7 @@ Con la etiqueta <input> cuyos id deben ser "in_usuario" y "in_contrasena"-->
             <div class="foot01">
                 <h4>Teléfonos:</h4>
                 <br>
-                <p> 320 353 5571  -  310 236 0999 </p>
+                <p> 320 222 3333  -  310 444 5555 </p>
             </div>
             <div class="foot02">
                 <h4>Horarios de atención: </h4>        
