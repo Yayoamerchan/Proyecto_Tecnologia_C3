@@ -1,8 +1,13 @@
+* {
+    padding: 1px;
+    margin: 1px;
+}
+
 body {
     padding: 0;
     margin: 0;
     padding: 0 20px;
-    background-image: url("../images/Imagen1.jpg");
+    background-image: url("../images/geometric.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -156,11 +161,13 @@ p, h4 {
 
 h2, h1 {
     text-align: center;
+    color: white;
 }
 
-.label {
+label {
     font-size: medium;
     font-family: fantasy;
+    color: white
 }
 
 .data:valid {
@@ -250,7 +257,7 @@ ul, ol {
 }
 
 .nav {
-    grid-area: nav_01;
+    grid-area: nav_01;    
     display:block;
     flex-direction: column;
     flex-wrap: wrap;
@@ -261,6 +268,6 @@ ul, ol {
 .requisitos{
     font-style: italic;
     font-size: 14px;
-    color: #ffff00;
+    color: white;
 }
 /*Fin requisitos usuario y password*/

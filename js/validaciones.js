@@ -12,4 +12,7 @@ function validar_nombreUsuario(){
 }
 
 
-\w{4,9}
+/* \w{4,9} */
+
+module.exports.validar_nombreUsuario = validar_nombreUsuario();
+module.exports.validar_contrasena = validar_contrasena();
